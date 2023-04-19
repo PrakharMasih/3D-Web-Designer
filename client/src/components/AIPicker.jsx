@@ -1,8 +1,26 @@
 import React from 'react'
 
+import alanBtn from '@alan-ai/alan-sdk-web';
 import CustomButton from './CustomButton';
+import { useEffect } from 'react';
 
 const AIPicker = ({ prompt, setPrompt, generatingImg, handleSubmit }) => {
+
+  useEffect(() => {
+    alanBtn({
+        key: '1843efe130e7216a50d256309aebd0de2e956eca572e1d8b807a3e2338fdd0dc/stage',
+        onCommand: ({ command, data }) => {
+          if (command === 'generate') {
+            // Call the client code that will react to the received command
+            console.log(data);
+            setPrompt(data);
+          }
+        }
+    });
+  }, []);
+
+  useEffect(() => console.log(prompt),[prompt]);
+
   return (
     <div className="aipicker-container">
       <textarea 

@@ -10,21 +10,21 @@ import {
   headTextAnimation,
   slideAnimation
 } from '../config/motion';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 const Home = () => {
   const snap = useSnapshot(state);
 
-  useEffect(() => {
-    alanBtn({
-        key: '1843efe130e7216a50d256309aebd0de2e956eca572e1d8b807a3e2338fdd0dc/stage',
-        onCommand: (commandData) => {
-          if (commandData.command === 'go:back') {
-            // Call the client code that will react to the received command
-          }
-        }
-    });
-  }, []);
+  // useEffect(() => {
+  //   alanBtn({
+  //       key: '1843efe130e7216a50d256309aebd0de2e956eca572e1d8b807a3e2338fdd0dc/stage',
+  //       onCommand: (commandData) => {
+  //         if (commandData.command === 'go:back') {
+  //           // Call the client code that will react to the received command
+  //         }
+  //       }
+  //   });
+  // }, []);
   
 
   return (
