@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSnapshot } from 'valtio';
-import alanBtn from '@alan-ai/alan-sdk-web';
+// import alanBtn from '@alan-ai/alan-sdk-web';
 
 import state from '../store';
 import { CustomButton } from '../components';
